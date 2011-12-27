@@ -10,7 +10,7 @@ def compress_files_and_write_to_out_as_zips(files)
 	files.each do
 		|f|
 		pretty_name = f.chomp(File.extname(f))
-		if File.exists?("out\\#{pretty_name}.zip)
+		if File.exists?("out\\#{pretty_name}.zip")
       puts "out\\#{pretty_name}.zip  ALREADY EXISTED, SKIPPING FILE.  DELETE MANUALLY IF PREFERED =/"
       next
 		end
