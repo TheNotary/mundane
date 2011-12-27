@@ -1,0 +1,15 @@
+Oh, why, hello there.  I'm Notary Sojac, and you are inspecting one of my scripts which was designed to take all the files in the current working folder, and put them into \out.  The catch?  Oh yes, the catch is that they will become .zip files meaning that you will need to decrypt them before reading/seeing/interacting with them.  There are no free lunches.  
+
+To make it do:
+
+1)  Have ruby installed on your machine
+
+2)  do $  gem install rubyzip  to install the dependancy
+
+3)  Copy my snazzy script files_to_zips.rb into the folder you have laying around which contains the files you would like individually zipped.
+
+4)  Run my script in that directory ($  ruby files_to_zips.rb)
+
+5)  Investigate the "out" directory which was created throughout this process.  
+
+6)  Profit
