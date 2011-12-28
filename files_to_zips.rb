@@ -21,10 +21,6 @@ def compress_files_and_write_to_out_as_zips(files)
 	end
 end
 
-def file_name_less_extension(full_name)
-	full_name = full
-end
-
 def get_files_in_current_folder
 	files = []
 	Dir.foreach(".") do
