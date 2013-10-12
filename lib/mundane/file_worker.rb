@@ -14,5 +14,9 @@ module Mundane
       return files
     end
     
+    def count_targeted_files
+      get_files_in_current_folder.count
+    end
+    
   end
 end

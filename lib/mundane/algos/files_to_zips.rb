@@ -1,9 +1,10 @@
 module Mundane
   class FilesToZips
     extend Mundane::FileWorker
+    extend Mundane::Prompter
     
     def self.execute
-      user_wants_to_proceed = prompt_user_if_theyd_like_to_make_zips
+      user_wants_to_proceed = prompt_user("Are you sure you want to make %count_targeted_files% zipped files and put them into ./out/ ?\n[Y/n]")
 
       if user_wants_to_proceed
         make_output_directory
@@ -12,6 +13,7 @@ module Mundane
       end
       
     end
+  
   
     def self.compress_files_and_write_to_out_as_zips(files)
       files.each do |f|
@@ -28,22 +30,7 @@ module Mundane
         
       end
     end
-
-
-
-    def self.prompt_user_if_theyd_like_to_make_zips
-      puts "Are you sure you want to make X zip files and put them into ./out/ ?\n[Y/n]"
-      proceed = STDIN.gets.strip.downcase
-  
-      if proceed == "y" or proceed == "yes" or proceed == ""
-        true 
-      else
-        false
-      end
-    end
-    
-    
-    
+   
   end
 end
 

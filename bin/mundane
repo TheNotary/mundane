@@ -15,6 +15,12 @@ class MundaneRunner < Thor
   def files2zips
     Mundane.files_to_zips
   end
+  
+  desc "zips2files", "Reads each zip file in the current directory and extracts its contents to a folder named 'out'.\n
+                                  "
+  def zips2files
+    Mundane.zips_to_files
+  end
 
 
 
