@@ -1,6 +1,8 @@
 == Future Version 0.0.? ==
 -New algo mp32mp3s??? which takes a long mp3 file and cuts it down to 70min segments???  (not started)
 -fix bug in zips2files to only decrypt files that end in .zip
+-allow password for zips
+-check to see if it works with .rar files
 
 
 == Version 0.0.1 ==
