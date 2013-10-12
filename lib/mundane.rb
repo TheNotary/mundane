@@ -2,7 +2,9 @@ require 'pry'
 require 'zip'
 
 require 'mundane/version'
-require 'mundane/files_to_zips'
+require 'mundane/file_worker'
+require 'mundane/algos/files_to_zips'
+
 
 
 module Mundane

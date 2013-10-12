@@ -4,18 +4,19 @@ require 'thor'
 require 'mundane'
 
 class MundaneRunner < Thor
-  
-  #default_task :help
-  
-  desc "files2zips", "reads each file in the directory and zips it, placing it in a new folder named 'out'."
-  def files2zips
-    Mundane.files_to_zips
-  end
 
   desc "version", "Prints Mundane's version"
   def version
     puts Mundane.version
   end
+
+  desc "files2zips", "reads each file in the directory and zips it, placing it in a new folder named 'out'.\n
+                      This will not include directorys, it will only work on files."
+  def files2zips
+    Mundane.files_to_zips
+  end
+
+
 
 end
 
