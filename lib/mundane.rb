@@ -9,7 +9,6 @@ module Mundane
   
   def self.files_to_zips
     FilesToZips.execute
-    #puts "this here is a stub"
   end
 
   def self.version

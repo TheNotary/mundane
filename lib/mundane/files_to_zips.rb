@@ -2,7 +2,6 @@ module Mundane
   class FilesToZips
     
     def self.execute
-      binding.pry
       user_wants_to_proceed = ask_user_if_theyd_like_to_make_zips
 
       if user_wants_to_proceed
