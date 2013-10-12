@@ -1,2 +1,6 @@
+pkg/
+doc/
+.yardoc/
+Gemfile.lock
+.project
 *.swp
-pkg/*
