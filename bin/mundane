@@ -14,7 +14,7 @@ class MundaneRunner < Thor
 
   desc "version", "Prints Mundane's version"
   def version
-    Mundane.version
+    puts Mundane.version
   end
 
 end
