@@ -1,0 +1,10 @@
+== Future Version 0.0.1 ==
+-Bug fixed where binding.pry was left in
+-Refactored code in files2zips
+-New algo zips2files
+
+
+== Version 0.0.0 ==
+Major:
+Pushed the gem to rubygems... it's really buggy though, but the first algo works...  Theres no testing... I left a binding.pry in there... bla, bla
+
