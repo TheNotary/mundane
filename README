@@ -1,6 +1,6 @@
-Oh, why, hello there.  I'm Notary Sojac, and you are inspecting one of my scripts which was originally designed to take all the files in the current working folder, and put them into \out.  The catch?  Oh yes, the catch is that they will become .zip files meaning that you will need to decrypt them before reading/seeing/interacting with them.  There are no free lunches.  But this algo is helpful for getting NES rom files into a proper format for consumption by NestopiaX. 
+Oh, why, hello there.  I'm Notary Sojac, and you are inspecting one of my scripts which was originally designed to take all the files in the current working folder, and put them into \out.  The catch?  Oh yes, the catch is that they will become .zip files meaning that you will need to decrypt them before reading/seeing/interacting with them.  There are no free lunches.  This algo is helpful for getting NES rom files into a proper format for consumption by NestopiaX on hacked XBOXes. 
 
-There will be more mundane algorithms added, such as right now, an algo to unzip a bunch of zip files and dump their contents into out/ (so a mass unzipping algo).  
+There will be more mundane algorithms added, such as right now I've just added an algo to unzip a bunch of zip files and dump their contents into out/ (so a mass unzipping algo).  
 
 To make it do:
 
