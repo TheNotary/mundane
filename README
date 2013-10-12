@@ -1,15 +1,17 @@
-Oh, why, hello there.  I'm Notary Sojac, and you are inspecting one of my scripts which was designed to take all the files in the current working folder, and put them into \out.  The catch?  Oh yes, the catch is that they will become .zip files meaning that you will need to decrypt them before reading/seeing/interacting with them.  There are no free lunches.  
+Oh, why, hello there.  I'm Notary Sojac, and you are inspecting one of my scripts which was originally designed to take all the files in the current working folder, and put them into \out.  The catch?  Oh yes, the catch is that they will become .zip files meaning that you will need to decrypt them before reading/seeing/interacting with them.  There are no free lunches.  But this algo is helpful for getting NES rom files into a proper format for consumption by NestopiaX. 
+
+There will be more mundane algorithms added, such as right now, an algo to unzip a bunch of zip files and dump their contents into out/ (so a mass unzipping algo).  
 
 To make it do:
 
-1)  Have ruby installed on your machine
+1)  Have ruby installed on your machine.
 
-2)  do $  gem install rubyzip  to install the dependancy
+2)  do `$  gem install mundane` to install the gem. 
 
-3)  Copy my snazzy script files_to_zips.rb into the folder you have laying around which contains the files you would like individually zipped.
+3)  Change directory into the folder you'd like to conduct a mundane task in.  
 
-4)  Run my script in that directory ($  ruby files_to_zips.rb)
+4)  Run the gem, specifying which mundane task you'd like performed, eg `$  mundane files2zips`
 
-5)  Investigate the "out" directory which was created throughout this process.  
+5)  Investigate the "out" directory which was created when you ran the command.  
 
-6)  Profit
+6)  Profit.
