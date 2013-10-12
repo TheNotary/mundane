@@ -22,8 +22,6 @@ class MundaneRunner < Thor
     Mundane.zips_to_files
   end
 
-
-
 end
 
 MundaneRunner.start

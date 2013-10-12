@@ -20,7 +20,7 @@ module Mundane
   end
 
   def self.version
-    puts Mundane::VERSION
+    Mundane::VERSION
   end
 
 end
