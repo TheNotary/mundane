@@ -19,4 +19,3 @@ end
 def count_of_files_in(directory_path)
   Dir.glob(File.join(directory_path, '**', '*')).select { |file| File.file?(file) }.count
 end
-
