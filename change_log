@@ -1,8 +1,15 @@
-== Future Version 0.0.1 ==
--Bug fixed where binding.pry was left in
--Refactored code in files2zips
+== Future Version 0.0.? ==
+-New algo mp32mp3s??? which takes a long mp3 file and cuts it down to 70min segments???  (not started)
+-fix bug in zips2files to only decrypt files that end in .zip
+
+
+== Version 0.0.1 ==
+Major:
 -New algo zips2files
 
+Minor:
+-Bug fixed where binding.pry was left in
+-Refactored code in files2zips
 
 == Version 0.0.0 ==
 Major:
