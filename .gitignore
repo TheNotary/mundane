@@ -4,3 +4,4 @@ doc/
 Gemfile.lock
 .project
 *.swp
+*.gem
