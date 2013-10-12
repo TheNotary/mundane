@@ -6,7 +6,7 @@ require "mundane/version"
 Gem::Specification.new do |s|
   s.name = "mundane"
   s.version = Mundane::VERSION
-  s.authors = ""
+  s.authors = "n-jax"
   s.email = ""
   s.homepage = "https://github.com/TheNotary/files_to_zips"
   s.summary = "Mundane automates the mundane file operations you sometimes wind up needing to do such as unzipping a billion files, or zipping a billion so they work on xbox or w/e"
