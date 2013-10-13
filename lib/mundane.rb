@@ -1,4 +1,3 @@
-#require 'pry'
 require 'zip'
 
 require 'mundane/version'

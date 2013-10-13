@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    mundane (0.0.1)
+    mundane (0.0.2)
       rubyzip
       thor
 

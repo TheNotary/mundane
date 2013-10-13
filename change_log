@@ -4,6 +4,8 @@
 -allow password for zips
 -check to see if it works with .rar files
 
+== Version 0.0.3 ==
+-Fixed a tiny annoying bug in the zips2files algo where directories within the zip archives weren't being created during the extraction
 
 == Version 0.0.2 ==
 Minor:

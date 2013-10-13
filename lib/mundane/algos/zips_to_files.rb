@@ -16,25 +16,34 @@ module Mundane
     
     def self.decompress_files_and_dump_them_to_out(files)
       incomplete_extractions = 0
+      all_files_were_archives = true
       
       # decompress each file in the list
       files.each do |zip|
                                              # TODO:  next if zip.extension != 'zip'
-        Zip::File.open(zip) do |archive|
-          archive.each do |f|
-            output_path = "out/#{f.name}"
-            if File.exists? output_path          # don't auto-overwrite anything...
-              puts "#{output_path} ALREADY EXISTED, SKIPPING FILE.  DELETE MANUALLY IF NEEDED =/"
-              incomplete_extractions += 1
-              next
+        begin
+          Zip::File.open(zip) do |archive|
+            archive.each do |f|
+              output_path = "out/#{f.name}"
+              if File.exists? output_path          # don't auto-overwrite anything...
+                puts "#{output_path} ALREADY EXISTED, SKIPPING FILE."
+                incomplete_extractions += 1
+                next
+              end
+              
+              FileUtils.mkdir_p File.dirname(output_path)
+              f.extract output_path
             end
-            f.extract output_path
           end
+        rescue
+          # skip the file if it can't be opened like a zip
+          all_files_were_archives = false
         end
 
       end
       
       puts "\nOperation terminated, there were #{incomplete_extractions} incomplete extractions." if incomplete_extractions > 0
+      puts "Not all files were valid archives" unless all_files_were_archives
     end
     
   end

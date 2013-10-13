@@ -40,6 +40,21 @@ describe "test the algos" do
     
     it 'should make 2 files in the out folder' do
       drop_dummy_zip_file
+
+      Mundane.zips_to_files
+      count_of_files_in(fake_out_directory).should be 2
+    end
+    
+    it "should work on zip archives that have a folder in them" do
+      drop_dummy_zip_file_with_folders
+      
+      Mundane.zips_to_files
+      count_of_files_in(fake_out_directory).should be 2
+    end
+    
+    it "should ignore files that aren't really archives" do
+      drop_dummy_zip_file
+      drop_dummy_files_in_working_directory
       
       Mundane.zips_to_files
       count_of_files_in(fake_out_directory).should be 2
