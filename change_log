@@ -5,7 +5,9 @@
 -check to see if it works with .rar files
 
 == Version 0.0.3 ==
+Minor:
 -Fixed a tiny annoying bug in the zips2files algo where directories within the zip archives weren't being created during the extraction
+-Duefully fixed bug where non-archive files were being opened which lead to crashing
 
 == Version 0.0.2 ==
 Minor:
