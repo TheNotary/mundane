@@ -5,6 +5,10 @@
 -check to see if it works with .rar files
 
 
+== Version 0.0.2 ==
+Minor:
+-Commented out the 'require "pry"' statement which broke the gem on windoze
+
 == Version 0.0.1 ==
 Major:
 -New algo zips2files
