@@ -20,7 +20,7 @@ module Mundane
   end
   
   def self.truncate_file_names(desired_length)
-    TruncateFileNames.execute(desired_length)
+    TruncateFileNames.execute(desired_length.to_i)
   end
 
   def self.version

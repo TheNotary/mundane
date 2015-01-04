@@ -22,6 +22,8 @@ class MundaneRunner < Thor
     Mundane.zips_to_files
   end
   
+  desc "truncate n", "truncates the file names to the specified length, attempting to preserve extension.\n
+                                  "
   def truncate(desired_length)
     Mundane.truncate_file_names(desired_length)
   end
