@@ -4,6 +4,10 @@ require './lib/mundane'
 require './spec/hack_working_directory'   # this require must come LAST or reletive requires will fail hard... oh wait... if there are more test files... everything foobars...
 
 describe "test the algos" do
+  
+  before :each do
+    extend Mundane::FileWorker
+  end
 
   describe "test files_to_zips algo" do
     
@@ -81,17 +85,47 @@ describe "test the algos" do
       
       Mundane.truncate_file_names(8)
       
-      
       files = get_files_in_current_folder
       
       files.each do |f| 
         (f.length <= 8).should be_true
       end
-      
-      
     end
     
   end
+  
+  describe "test ban_from_name" do
+    before :each do
+      Mundane::BanFromName.stub(:prompt_user).and_return(true)
+      
+      clean_dummy_working_directory
+    end
+    
+    after :each do
+      Mundane::BanFromName.unstub(:prompt_user)
+      clean_dummy_working_directory
+    end
+    
+    it "should ban chars from name specified" do
+      banned_chars = ",$"
+      
+      drop_dummy_files_in_working_directory_with_offending_names
+      
+      Mundane.ban_from_name(banned_chars)
+      
+      files = get_files_in_current_folder
+      
+      files.each do |f| 
+        banned_chars.split("").each do |c|
+          f.include?(c).should be_false
+        end
+      end
+      
+      binding.pry
+    end
+    
+  end
+    
   
   
   describe "prompter unit test..." do

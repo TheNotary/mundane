@@ -27,7 +27,14 @@ class MundaneRunner < Thor
   def truncate(desired_length)
     Mundane.truncate_file_names(desired_length)
   end
-
+  
+  desc "ban {characters}", "ban/ banfromname strips out the specified characters from file names (don't quote them!)
+                                  "
+  def ban(banned_characters)
+    Mundane.ban_from_name(banned_characters)
+  end
+  
+  
 end
 
 MundaneRunner.start

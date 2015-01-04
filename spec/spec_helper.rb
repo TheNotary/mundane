@@ -21,8 +21,16 @@ def drop_dummy_files_in_working_directory
 end
 
 def drop_dummy_files_in_working_directory_with_varying_names
-  touch "/tmp/mundane-virtual-working-directory/houstonfoobar.txt"
+  touch "/tmp/mundane-virtual-working-directory/0houstonfoobar.txt"
   touch "/tmp/mundane-virtual-working-directory/a"
+  touch "/tmp/mundane-virtual-working-directory/b."
+  touch "/tmp/mundane-virtual-working-directory/c.txt"
+  # touch "/tmp/mundane-virtual-working-directory/c.txtfdsdf"
+end
+
+def drop_dummy_files_in_working_directory_with_offending_names
+  touch "/tmp/mundane-virtual-working-directory/0houston,foobar.txt"
+  touch "/tmp/mundane-virtual-working-directory/a$"
   touch "/tmp/mundane-virtual-working-directory/b."
   touch "/tmp/mundane-virtual-working-directory/c.txt"
   # touch "/tmp/mundane-virtual-working-directory/c.txtfdsdf"
