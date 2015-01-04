@@ -21,6 +21,10 @@ class MundaneRunner < Thor
   def zips2files
     Mundane.zips_to_files
   end
+  
+  def truncate(desired_length)
+    Mundane.truncate_file_names(desired_length)
+  end
 
 end
 

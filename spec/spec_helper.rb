@@ -1,3 +1,4 @@
+require 'pry'
 require 'fileutils'
 include FileUtils
 
@@ -18,6 +19,15 @@ def drop_dummy_files_in_working_directory
   touch "/tmp/mundane-virtual-working-directory/b"
   touch "/tmp/mundane-virtual-working-directory/c"
 end
+
+def drop_dummy_files_in_working_directory_with_varying_names
+  touch "/tmp/mundane-virtual-working-directory/houstonfoobar.txt"
+  touch "/tmp/mundane-virtual-working-directory/a"
+  touch "/tmp/mundane-virtual-working-directory/b."
+  touch "/tmp/mundane-virtual-working-directory/c.txt"
+  # touch "/tmp/mundane-virtual-working-directory/c.txtfdsdf"
+end
+
 
 def drop_dummy_zip_file
   # This string was coppied from a hex editor (bless) on linux

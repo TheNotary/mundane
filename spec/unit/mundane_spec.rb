@@ -62,6 +62,37 @@ describe "test the algos" do
     
   end
   
+  describe "test file_name_shortener" do
+    before :each do
+      Mundane::TruncateFileNames.stub(:prompt_user).and_return(true)
+      
+      clean_dummy_working_directory
+    end
+    
+    after :each do
+      Mundane::TruncateFileNames.unstub(:prompt_user)
+      clean_dummy_working_directory
+    end
+    
+    it "should shorten all the filenames to the requested length" do
+      extend Mundane::FileWorker
+      
+      drop_dummy_files_in_working_directory_with_varying_names
+      
+      Mundane.truncate_file_names(8)
+      
+      
+      files = get_files_in_current_folder
+      
+      files.each do |f| 
+        (f.length <= 8).should be_true
+      end
+      
+      
+    end
+    
+  end
+  
   
   describe "prompter unit test..." do
     before :each do
